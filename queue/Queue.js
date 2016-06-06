@@ -1,10 +1,10 @@
-export default class Queue {
+module.exports.Queue = class Queue {
   constructor() {
     this._queue = [];
   }
 
   enqueue(item) {
-    this._queue.unshift(item);
+    this._queue.push(item);
 
     return item;
   }
@@ -21,18 +21,18 @@ export default class Queue {
     return !this._queue.length;
   }
 
-  peak() {
+  peek() {
     if (this.isEmpty()) {
       throw new Error('empty');
     }
 
     return this._queue[0];
   }
-}
+};
 
-import Stack from '../stack/Stack';
+const Stack = require('../stack/Stack');
 
-export class QueueWithStacks {
+module.exports.QueueWithStacks = class QueueWithStacks {
   constructor() {
     this._stack1 = new Stack();
     this._stack2 = new Stack();
@@ -58,7 +58,7 @@ export class QueueWithStacks {
     return this._stack1.isEmpty() && this._stack2.isEmpty();
   }
 
-  peak() {
+  peek() {
     if (this.isEmpty()) {
       throw new Error('empty');
     }
@@ -67,6 +67,6 @@ export class QueueWithStacks {
       this._stack2.push(this._stack1.pop())
     }
 
-    return this._stack2.peak();
+    return this._stack2.peek();
   }
-}
+};

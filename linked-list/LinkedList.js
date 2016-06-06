@@ -1,4 +1,4 @@
-export default class LinkedList {
+module.exports.LinkedList = class LinkedList {
   constructor() {
     this._head = null;
   }
@@ -79,11 +79,22 @@ export default class LinkedList {
 
     return currNode;
   }
-}
 
-export class Node {
+  traverse(func, context = null) {
+    let node = this._head;
+    let i = 0;
+
+    while(node) {
+      func.call(context, node.val, i);
+      i++;
+      node = node.next;
+    }
+  }
+};
+
+class Node {
   constructor(val) {
-    this._val = val;
+    this.val = val;
     this.next = null;
   }
 }

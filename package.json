@@ -1,0 +1,22 @@
+{
+  "name": "data-structures-javascript",
+  "version": "1.0.0",
+  "description": "Data structure implementations in Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malucky/data-structures-javascript.git"
+  },
+  "author": "Ray Ma <rhm262@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malucky/data-structures-javascript/issues"
+  },
+  "homepage": "https://github.com/malucky/data-structures-javascript#readme",
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}

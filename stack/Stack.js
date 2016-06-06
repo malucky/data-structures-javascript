@@ -1,4 +1,4 @@
-export default class Stack {
+module.exports = class Stack {
   constructor() {
     this._stack = [];
   }
@@ -21,11 +21,11 @@ export default class Stack {
     return !this._stack.length;
   }
 
-  peak() {
+  peek() {
     if (this.isEmpty()) {
       throw new Error('empty');
     }
 
     return this._stack[this._stack.length - 1];
   }
-}
+};
