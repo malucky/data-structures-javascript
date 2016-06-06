@@ -30,7 +30,7 @@ module.exports.Queue = class Queue {
   }
 };
 
-const Stack = require('../stack/Stack');
+const Stack = require('../stack/Stack').Stack;
 
 module.exports.QueueWithStacks = class QueueWithStacks {
   constructor() {

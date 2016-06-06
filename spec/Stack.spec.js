@@ -1,4 +1,4 @@
-const Stack = require('../stack/Stack');
+const Stack = require('../stack/Stack').Stack;
 
 describe('Stack', () => {
   it('should be LIFO', () => {

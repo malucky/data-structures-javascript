@@ -1,4 +1,4 @@
-module.exports = class Stack {
+module.exports.Stack = class Stack {
   constructor() {
     this._stack = [];
   }
